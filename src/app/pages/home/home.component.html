@@ -1,0 +1,14 @@
+<span [ngSwitch]="page">
+<p *ngSwitchCase="'update'">
+    <app-update></app-update>
+</p>
+<p *ngSwitchCase="'delete'">
+    <app-delete></app-delete>
+</p>
+<p *ngSwitchCase="'view'">
+    
+</p>
+<p *ngSwitchDefault>
+    <app-view-card *ngFor="let item of usages" [usage]="item" appOnHover></app-view-card>
+</p>
+</span>
