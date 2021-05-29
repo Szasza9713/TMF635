@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { UsageService } from 'src/app/services/usage.service';
 import { Usage } from 'src/app/shared/models/usage.model';
 
 @Component({
@@ -8,10 +9,14 @@ import { Usage } from 'src/app/shared/models/usage.model';
 })
 export class ViewCardComponent implements OnInit {
   @Input() usage?: Usage;
-  
-  constructor() { }
+
+  constructor(private us: UsageService) { }
 
   ngOnInit(): void {
+  }
+
+  delete(): void {
+    this.us.delete('usages', this.usage?.id ? this.usage?.id : '');
   }
 
 }

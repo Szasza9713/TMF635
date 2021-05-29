@@ -7,5 +7,8 @@
   </mat-card-header>
   <mat-card-content>
     <p>{{usage.status}}</p>
+    <p>{{usage.usageDate | date}}</p>
   </mat-card-content>
+  <button (click)="delete()">Törlés</button>
+
 </mat-card>

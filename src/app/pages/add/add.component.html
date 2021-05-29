@@ -13,10 +13,14 @@
     <mat-label>Status</mat-label>
     <input matInput placeholder="Status" focus formControlName="status" required>
   </mat-form-field>
-  <mat-form-field class="max-width">
-    <mat-label>Usage Date</mat-label>
-    <input matInput placeholder="Usage date" focus formControlName="usageDate" required>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="usageDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
+
   <mat-form-field class="max-width">
     <mat-label>Usage Type</mat-label>
     <input matInput placeholder="Usage type" focus formControlName="usageType" required>
