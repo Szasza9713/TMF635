@@ -1,0 +1,27 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <h3>Játék felvétel</h3>
+  <mat-form-field class="max-width">
+    <mat-label>Description</mat-label>
+    <textarea placeholder="description" formControlName="description" matInput cdkTextareaAutosize
+      cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Href</mat-label>
+    <input matInput placeholder="Href" focus formControlName="href">
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Status</mat-label>
+    <input matInput placeholder="Status" focus formControlName="status" required>
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Usage Date</mat-label>
+    <input matInput placeholder="Usage date" focus formControlName="usageDate" required>
+  </mat-form-field>
+  <mat-form-field class="max-width">
+    <mat-label>Usage Type</mat-label>
+    <input matInput placeholder="Usage type" focus formControlName="usageType" required>
+  </mat-form-field>
+
+      <button  type="submit">Submit</button>
+ 
+</form>

@@ -3,17 +3,18 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { UpdateModule } from '../update/update.module';
 import { DeleteModule } from '../delete/delete.module';
-import { ViewCardModule } from '../view/view-card/view-card.module';
+import { ViewModule } from '../view/view.module';
 import { NavModule } from '../nav/nav.module';
+import { AddModule } from '../add/add.module';
 
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
-    CommonModule, ViewCardModule,UpdateModule,DeleteModule,NavModule
+    CommonModule, ViewModule,UpdateModule,DeleteModule,NavModule,AddModule
   ],
   exports: [HomeComponent]
 })

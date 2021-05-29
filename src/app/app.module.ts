@@ -7,6 +7,9 @@ import { HomeModule } from './pages/home/home.module';
 import { UsageService } from './services/usage.service';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -18,7 +21,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     BrowserModule,
     BrowserAnimationsModule,
     HomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [UsageService],
   bootstrap: [AppComponent]

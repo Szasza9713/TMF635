@@ -6,9 +6,10 @@
     <app-delete></app-delete>
 </p>
 <p *ngSwitchCase="'view'">
-    
+    <app-add></app-add>
 </p>
 <p *ngSwitchDefault>
-    <app-view-card *ngFor="let item of usages" [usage]="item" appOnHover></app-view-card>
+    
+    <app-view></app-view>
 </p>
 </span>
