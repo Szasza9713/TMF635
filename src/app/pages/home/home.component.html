@@ -1,16 +1,23 @@
+<mat-toolbar class="menubar" color = "primary">
+    <button mat-fab color="primary" class = "gap menubar-element" (click)='setPage("view")'>
+        <mat-icon>list</mat-icon>
+        
+    </button>
+    <button mat-fab color="primary" class = "gap menubar-element" (click)='setPage("add")'>
+        <mat-icon>add</mat-icon>
+    </button>
+    <span class = "filler"></span>
+    <span>Szalai Máté</span>
+ </mat-toolbar>
+
 <span [ngSwitch]="page">
-<p *ngSwitchCase="'update'">
-    <app-update></app-update>
-</p>
-<p *ngSwitchCase="'delete'">
-    <app-delete></app-delete>
-</p>
-<p *ngSwitchCase="'view'">
-    
-</p>
-<p *ngSwitchDefault>
-    
+<div *ngSwitchCase="'add'">
     <app-add></app-add>
+</div>
+<div *ngSwitchCase="'view'">
     <app-view></app-view>
-</p>
+</div>
+<div *ngSwitchDefault>
+    <app-view></app-view>
+</div>
 </span>

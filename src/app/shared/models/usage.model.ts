@@ -8,7 +8,7 @@ export interface Usage {
     href?: string;
     id: string;
     status: string;
-    usageDate?: Date;
+    usageDate: any;
     usageType: string;
 
     relatedParty?: RelatedParty[];

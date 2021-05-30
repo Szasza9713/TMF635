@@ -1,21 +1,5 @@
 import { Usage } from '../models/usage.model';
 
-/*export const CATEGORIES: Category[] = [
-    {
-        title: 'filmek',
-        icon: 'movie',
-        value: 'movie',
-        color: 'teal'
-    },
-    {
-        title: 'Játékok',
-        icon: 'games',
-        value: 'game',
-        color: 'cyan'
-    }
-];*/
-
-
 export const USAGE: Usage[] = [
     {
         description: 'description',

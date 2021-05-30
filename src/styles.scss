@@ -4,6 +4,42 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body {
     height: 100%;
-    background: #394039;
+    //background: #394039;
+    background: #7b1fa2 !important;
     color: white;
-  }
+}
+form {
+  background: #394039;
+}
+
+  
+.filler {
+  flex: 1 1 auto;
+}
+.gap {
+  margin-right: 10px;
+}
+
+.custom-form-field{
+  width: 100%;
+  height: 80px;
+}
+
+.submit-button {
+  background-color: #7b1fa2;;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.form-mat-card {
+  margin-bottom: 30px;
+}

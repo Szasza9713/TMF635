@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ViewComponent } from './view.component';
 import { ViewCardModule } from './view-card/view-card.module';
 
-
-
 @NgModule({
   declarations: [
     ViewComponent

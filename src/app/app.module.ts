@@ -10,6 +10,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
+import { RouterModule } from '@angular/router';
+import { EditModule } from './pages/edit/edit.module';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { environment } from 'src/environments/environment';
     HomeModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    RouterModule,
+    EditModule
   ],
   providers: [UsageService],
   bootstrap: [AppComponent]

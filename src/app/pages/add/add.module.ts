@@ -4,7 +4,7 @@ import { AddComponent } from './add.component';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatCardActions } from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
@@ -14,7 +14,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     AddComponent
   ],
   imports: [
-    CommonModule, MatFormFieldModule,FormsModule,ReactiveFormsModule,MatInputModule,MatDatepickerModule,MatNativeDateModule
+    CommonModule, MatFormFieldModule,FormsModule,ReactiveFormsModule,MatInputModule,MatDatepickerModule,MatNativeDateModule,MatCardModule
   ],
   exports: [AddComponent]
 })

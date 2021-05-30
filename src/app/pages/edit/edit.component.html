@@ -1,0 +1,54 @@
+<mat-toolbar color = "primary">
+    <button mat-fab color="primary" class = "gap" [routerLink]="['/home']" >
+        <mat-icon>arrow_left</mat-icon>
+    </button>
+    <span class = "filler"></span>
+    <span>Szalai Máté</span>
+</mat-toolbar>
+
+  
+<form [formGroup]="form" (ngSubmit)="edit()">
+    <mat-card class="form-mat-card">
+      <mat-card-header>
+        <mat-card-title >Usage edit</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>You can edit usages here.</p>
+      </mat-card-content>
+    </mat-card>
+  
+    <mat-form-field class="max-width custom-form-field">
+      <mat-label>Usage Type</mat-label>
+      <input matInput placeholder="Usage type" focus formControlName="usageType" required>
+    </mat-form-field>
+  
+    <mat-form-field class="max-width custom-form-field">
+      <mat-label>Href</mat-label>
+      <input matInput placeholder="Href" focus formControlName="href">
+    </mat-form-field>
+  
+    <mat-form-field class="max-width custom-form-field">
+      <mat-label>Status</mat-label>
+      <input matInput placeholder="Status" focus formControlName="status" required>
+    </mat-form-field>
+  
+    <mat-form-field class="max-width custom-form-field">
+      <mat-label>Description</mat-label>
+      <textarea placeholder="description" formControlName="description" matInput cdkTextareaAutosize required 
+        cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+    </mat-form-field>
+  
+    <mat-card class="add-page-submit-card">
+  
+      <div class="row"  *ngIf="showMsg">
+        <div class="col-xs-12">
+          <p class="alert alert-success">
+              <strong>Usage successfully updated!</strong>.
+          </p>
+        </div>
+      </div>
+  
+      <button class="submit-button" type="submit">Edit</button>
+    </mat-card>
+    
+  </form>

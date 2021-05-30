@@ -1,14 +1,39 @@
 <mat-card *ngIf="usage">
   <mat-card-header>
-    <mat-card-title>{{usage.id}}</mat-card-title>
+    <mat-card-title><strong>ID: </strong>{{usage.id}}</mat-card-title>
     <mat-card-subtitle>
-      <div>{{usage.description}}</div>
+      <div><strong>UsageType: </strong>{{usage.usageType}}</div>
     </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <p>{{usage.status}}</p>
-    <p>{{usage.usageDate | date}}</p>
+    <div class="view-card-content-wrapper">
+      <p class="view-card-content-title"><strong>Href</strong></p>
+      <p class="view-card-content-data">{{usage.href}}</p>
+      <hr color="warn" size="1" width="100%"  >
+    </div>
+    <div class="view-card-content-wrapper">
+      <p class="view-card-content-title"><strong>Status</strong></p>
+      <p class="view-card-content-data">{{usage.status}}</p>
+      <hr color="warn" size="1" width="100%"  >
+    </div>
+    <div class="view-card-content-wrapper">
+      <p class="view-card-content-title"><strong>Description</strong></p>
+      <p class="view-card-content-data">{{usage.description}}</p>
+      <hr color="warn" size="1" width="100%"  >
+    </div>
+    <div class="view-card-content-wrapper">
+      <p class="view-card-content-title"><strong>Date</strong></p>
+      <p class="view-card-content-data">{{usage.usageDate.toMillis() | date: 'dd/MM/yyyy'}}</p>
+      <hr color="warn" size="1" width="100%"  >
+    </div>
+  
   </mat-card-content>
-  <button (click)="delete()">Törlés</button>
+  <button class="view-card-buttons" mat-fab color="primary" (click)="delete()">
+    <mat-icon>delete</mat-icon>
+  </button>
+
+  <button class="view-card-buttons" mat-fab color="primary"  [routerLink]="['/edit/',usage.id]" >
+    <mat-icon>edit</mat-icon>
+  </button>
 
 </mat-card>
